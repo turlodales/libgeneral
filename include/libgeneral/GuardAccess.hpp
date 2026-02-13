@@ -30,6 +30,14 @@ namespace tihmstar {
         //write/modify access
         void lockMember();
         void unlockMember();
+        bool isLocked();
+        
+        /*
+            Attempts to lock Member if it is not already locked.
+            Returns true if lock was acquired
+            Returns false if already locked
+         */
+        bool tryLockMember();
 
         //block until someone removed members
         void waitForMemberDrain();
