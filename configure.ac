@@ -18,8 +18,8 @@ AC_SUBST([VERSION_COMMIT_SHA], ["m4_esyscmd([git rev-parse HEAD | tr -d '\n'])"]
 AC_PROG_CXX([clang++])
 AC_PROG_CC([clang])
 
-CXXFLAGS+=" -std=c++11"
-CFLAGS+=" -std=c11"
+CXXFLAGS+=" -fPIC -std=c++11"
+CFLAGS+=" -fPIC -std=c11"
 
 # Check for operating system
 AC_MSG_CHECKING([whether we need platform-specific build settings])
